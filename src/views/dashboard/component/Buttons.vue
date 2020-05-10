@@ -4,11 +4,7 @@
     fluid
     tag="section"
   >
-    <base-v-component
-      heading="Buttons"
-      link="components/buttons"
-    />
-
+  
     <v-card>
       <v-card-text class="pt-0">
         <v-row>

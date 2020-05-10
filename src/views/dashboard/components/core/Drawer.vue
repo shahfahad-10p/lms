@@ -31,7 +31,7 @@
           contain
         >
           <v-img
-            src="https://demos.creative-tim.com/vuetify-material-dashboard/favicon.ico"
+            src="../../../../assets/favicon.png"
             max-height="30"
           />
         </v-list-item-avatar>
@@ -79,9 +79,9 @@
     <template v-slot:append>
       <base-item
         :item="{
-          title: $t('upgrade'),
+          title: $t('logout'),
           icon: 'mdi-package-up',
-          to: '/upgrade',
+          to: '/',
         }"
       />
     </template>
@@ -130,11 +130,6 @@
           title: 'icons',
           icon: 'mdi-chart-bubble',
           to: '/components/icons',
-        },
-        {
-          title: 'google',
-          icon: 'mdi-map-marker',
-          to: '/maps/google-maps',
         },
         {
           title: 'notifications',

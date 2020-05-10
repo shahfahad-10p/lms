@@ -4,10 +4,6 @@
     fluid
     tag="section"
   >
-    <base-v-component
-      heading="Timelines"
-      link="components/timelines"
-    />
 
     <v-row>
       <v-col>

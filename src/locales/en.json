@@ -1,5 +1,5 @@
 {
-  "avatar": "Vuetify MD",
+  "avatar": "LMS",
   "buttons": "Buttons",
   "calendar": "Calendar",
   "charts": "Charts",
@@ -41,5 +41,6 @@
   "user": "User Profile",
   "vforms": "Validation Forms",
   "widgets": "Widgets",
-  "wizard": "Wizard"
+  "wizard": "Wizard",
+  "logout": "Log out"
 }

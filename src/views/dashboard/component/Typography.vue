@@ -4,10 +4,6 @@
     fluid
     tag="section"
   >
-    <base-v-component
-      heading="Typography"
-      link="styles/typography"
-    />
 
     <v-row
       align="center"

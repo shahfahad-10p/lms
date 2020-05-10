@@ -4,10 +4,6 @@
     fluid
     tag="section"
   >
-    <base-v-component
-      heading="Grid System"
-      link="components/grid"
-    />
 
     <v-row class="text-center">
       <base-subheading

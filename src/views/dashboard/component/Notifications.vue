@@ -4,10 +4,6 @@
     fluid
     tag="section"
   >
-    <base-v-component
-      heading="Alerts"
-      link="components/alerts"
-    />
 
     <v-row>
       <v-col

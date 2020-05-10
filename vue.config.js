@@ -13,7 +13,7 @@ module.exports = {
       enableInSFC: false,
     },
   },
-
+  outputDir: 'docs',
   publicPath: process.env.NODE_ENV === 'production'
     ? '/page.github.io/'
     : '/'
