@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Login from '@/views/Login.vue'
+import Register from '@/views/Register'
+import ResetPassword from '@/views/ForgotPassword'
 
 Vue.use(Router)
 
@@ -15,6 +17,16 @@ export default new Router({
       component: Login,
     },
     {
+      name: 'Register',
+      path: '/register',
+      component: Register,
+    },
+    {
+      name: 'ForgotPassword',
+      path: 'forgot-password',
+      component: ResetPassword,
+    },
+    {
       path: '/',
       component: () => import('@/views/dashboard/Index'),
       children: [
@@ -25,6 +37,11 @@ export default new Router({
           component: () => import('@/views/dashboard/Dashboard'),
         },
         // Pages
+        {
+          name: 'Schedule',
+          path: '/schedule',
+          component: () => import('@/views/dashboard/pages/schedule'),
+        },
         {
           name: 'User Profile',
           path: 'pages/user',

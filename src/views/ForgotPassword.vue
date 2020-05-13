@@ -13,7 +13,7 @@
         <base-material-card>
           <template v-slot:heading>
             <div class="display-2 font-weight-light">
-              Login
+              Forgot Password
             </div>
 
             <!-- <div class="subtitle-1 font-weight-light">
@@ -35,18 +35,24 @@
               </v-row>
 
               <v-row>
-                <v-col
+              <v-col
                   cols="12"
+                  md="2"
+                  class="text-right"
                 >
-                  <v-text-field
-                    label="Password"
-                    type="password"
-                    class="purple-input"
-                  />
+                <router-link :to="{ name: 'Login'}">Back</router-link>
+                  <!-- <v-btn
+                    color="success"
+                    class="mr-0"
+                    @click="submit"
+                  >
+                    Register
+                  </v-btn> -->
                 </v-col>
 
                 <v-col
                   cols="12"
+                  md="10"
                   class="text-right"
                 >
                   <v-btn
@@ -54,30 +60,8 @@
                     class="mr-0"
                     @click="submit"
                   >
-                    Submit
+                    Request Link
                   </v-btn>
-                </v-col>
-
-              </v-row>
-
-              <!-- <hr role="separator" aria-orientation="horizontal" class="mt-2 v-divider theme--light"> -->
-              <v-divider class="mb-1" />
-
-              <v-row>
-                <v-col
-                  cols="12"
-                  md="6"
-                  class="text-left"
-                >
-                  <router-link :to="{ name: 'ForgotPassword'}">Forgot Password ?</router-link>
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  md="6"
-                  class="text-right"
-                >
-                  <router-link :to="{ name: 'Register'}">Sign Up</router-link>
                 </v-col>
 
               </v-row>
@@ -89,6 +73,16 @@
 
     </v-row>
   </v-container>
+  <base-material-snackbar
+    v-model="snackbar"
+    type="info"
+    v-bind="{
+      ['top']: true,
+      ['right']: true
+    }"
+  >
+    You will recieve a confirmation email.
+  </base-material-snackbar>
 </v-app>
 </template>
 
@@ -97,14 +91,15 @@
   // import Router from 'vue-router'
 
   export default {
-    name: 'Login',
+    name: 'ResetPassword',
     data: () => ({
       direction: 'top center',
-      snackbar: true,
+      snackbar: false,
     }),
     methods: {
       submit () {
-        this.$router.push('dashboard')
+        this.snackbar = true
+        // this.$router.push('/')
       },
     },
     computed: {

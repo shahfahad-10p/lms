@@ -13,7 +13,7 @@
         <base-material-card>
           <template v-slot:heading>
             <div class="display-2 font-weight-light">
-              Login
+              Student Sign Up
             </div>
 
             <!-- <div class="subtitle-1 font-weight-light">
@@ -23,6 +23,40 @@
 
           <v-form>
             <v-container class="py-0">
+
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="6"
+                >
+                  <v-text-field
+                    label="First Name"
+                    class="purple-input"
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="6"
+                >
+                  <v-text-field
+                    label="Last Name"
+                    class="purple-input"
+                  />
+                </v-col>
+              </v-row>
+
+              <v-row>
+                <v-col
+                  cols="12"
+                >
+                  <v-text-field
+                    label="Student Id"
+                    class="purple-input"
+                  />
+                </v-col>
+              </v-row>
+
               <v-row>
                 <v-col
                   cols="12"
@@ -37,16 +71,14 @@
               <v-row>
                 <v-col
                   cols="12"
+                  md="2"
+                  class="text-right"
                 >
-                  <v-text-field
-                    label="Password"
-                    type="password"
-                    class="purple-input"
-                  />
+                <router-link :to="{ name: 'Login'}">Back</router-link>
                 </v-col>
-
                 <v-col
                   cols="12"
+                  md="10"
                   class="text-right"
                 >
                   <v-btn
@@ -57,29 +89,6 @@
                     Submit
                   </v-btn>
                 </v-col>
-
-              </v-row>
-
-              <!-- <hr role="separator" aria-orientation="horizontal" class="mt-2 v-divider theme--light"> -->
-              <v-divider class="mb-1" />
-
-              <v-row>
-                <v-col
-                  cols="12"
-                  md="6"
-                  class="text-left"
-                >
-                  <router-link :to="{ name: 'ForgotPassword'}">Forgot Password ?</router-link>
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  md="6"
-                  class="text-right"
-                >
-                  <router-link :to="{ name: 'Register'}">Sign Up</router-link>
-                </v-col>
-
               </v-row>
 
             </v-container>
@@ -97,19 +106,10 @@
   // import Router from 'vue-router'
 
   export default {
-    name: 'Login',
-    data: () => ({
-      direction: 'top center',
-      snackbar: true,
-    }),
+    name: 'Register',
     methods: {
       submit () {
-        this.$router.push('dashboard')
-      },
-    },
-    computed: {
-      parsedDirection () {
-        return this.direction.split(' ')
+        this.$router.push('/')
       },
     },
   }
