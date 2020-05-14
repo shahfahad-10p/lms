@@ -98,6 +98,18 @@
 
     </v-row>
   </v-container>
+
+  <base-material-snackbar
+    v-model="snackbar"
+    type="info"
+    v-bind="{
+      ['top']: true,
+      ['right']: true
+    }"
+  >
+  You will recieve a verification email from LMS.
+  </base-material-snackbar>
+
 </v-app>
 </template>
 
@@ -107,9 +119,13 @@
 
   export default {
     name: 'Register',
+    data: () => ({
+      snackbar: false,
+    }),
     methods: {
       submit () {
-        this.$router.push('/')
+        this.snackbar = true
+        // this.$router.push('/')
       },
     },
   }

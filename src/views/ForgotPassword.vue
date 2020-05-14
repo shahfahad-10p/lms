@@ -81,7 +81,7 @@
       ['right']: true
     }"
   >
-    You will recieve a confirmation email.
+    An email has been sent to your account to reset password.
   </base-material-snackbar>
 </v-app>
 </template>

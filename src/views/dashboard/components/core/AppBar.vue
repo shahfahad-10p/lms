@@ -62,7 +62,7 @@
       <v-icon>mdi-view-dashboard</v-icon>
     </v-btn> -->
 
-    <v-menu
+    <!-- <v-menu
       bottom
       left
       offset-y
@@ -104,54 +104,25 @@
           </app-bar-item>
         </div>
       </v-list>
-    </v-menu>
+    </v-menu> -->
 
-    <v-btn
+    <!-- <v-btn
       class="ml-2"
       min-width="0"
       text
       to="/pages/user"
     >
       <v-icon>mdi-account</v-icon>
-    </v-btn>
+    </v-btn> -->
   </v-app-bar>
 </template>
 
 <script>
-  // Components
-  import { VHover, VListItem } from 'vuetify/lib'
-
   // Utilities
   import { mapState, mapMutations } from 'vuex'
 
   export default {
     name: 'DashboardCoreAppBar',
-
-    components: {
-      AppBarItem: {
-        render (h) {
-          return h(VHover, {
-            scopedSlots: {
-              default: ({ hover }) => {
-                return h(VListItem, {
-                  attrs: this.$attrs,
-                  class: {
-                    'black--text': !hover,
-                    'white--text secondary elevation-12': hover,
-                  },
-                  props: {
-                    activeClass: '',
-                    dark: hover,
-                    link: true,
-                    ...this.$attrs,
-                  },
-                }, this.$slots.default)
-              },
-            },
-          })
-        },
-      },
-    },
 
     props: {
       value: {

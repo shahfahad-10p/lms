@@ -104,7 +104,7 @@
     }),
     methods: {
       submit () {
-        this.$router.push('dashboard')
+        this.$router.push('schedule')
       },
     },
     computed: {
